@@ -13,7 +13,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 	@Entity
-	@Table(name = "tb_unidadeMatematica")
+	@Table(name = "tb_unidade_Matematica")
 	public class Unidade {
 		
 		@Id

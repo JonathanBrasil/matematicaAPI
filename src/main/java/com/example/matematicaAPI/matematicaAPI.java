@@ -11,10 +11,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScan
 @EnableJpaRepositories
 @SpringBootApplication
-public class DemoApplication {
+public class matematicaAPI {
 
 		public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(matematicaAPI.class, args);
 	}
 
 }

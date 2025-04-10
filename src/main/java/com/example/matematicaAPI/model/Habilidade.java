@@ -2,6 +2,7 @@ package com.example.matematicaAPI.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,26 +11,25 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "tb_habilidades")
 public class Habilidade {
-	
-	@Entity
-	@Table(name = "tb_habilidades")
-	public class Habiidade {
 		
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long id; //ID autoincrementado
 		private Integer anoEscolar;
 		private String sigla; //Exemplo EF06MA17 -- Ensino Fundamental, ANO 06, Matematica, HABILIDADE 17
+		@Column(columnDefinition = "TEXT")
 		private String descricao;
 		private String objetoConhecimento;
 		private Integer bimestre;
 		@ManyToOne
 		@JsonIgnoreProperties("habilidades")
 	    @JoinColumn(name = "id_unidade", nullable = false) // Define a FK para a unidade (Numero, Algebra, Geometria, Grandeza, Probabilidade)
-	    private Unidade id_unidade; // Referência à entidade Unidade
+	    private Unidade unidade; // Referência à entidade Unidade
 	
-		public Habiidade(Long id, String sigla, String descricao, String objetoConhecimento, Integer bimestre,
+		public Habilidade(Long id, String sigla, String descricao, String objetoConhecimento, Integer bimestre,
 				Unidade id_unidade, Integer anoEscolar) {
 			super();
 			this.id = id;
@@ -38,7 +38,7 @@ public class Habilidade {
 			this.descricao = descricao;
 			this.objetoConhecimento = objetoConhecimento;
 			this.bimestre = bimestre;
-			this.id_unidade = id_unidade;
+			this.unidade = id_unidade;
 		}
 
 		//GETTERS AND SETTERS DE HABIIDADES
@@ -87,15 +87,12 @@ public class Habilidade {
 		}
 
 		public Unidade getId_unidade() {
-			return id_unidade;
+			return unidade;
 		}
 
 		public void setId_unidade(Unidade id_unidade) {
-			this.id_unidade = id_unidade;
+			this.unidade = id_unidade;
 		}
 		
 		
 	}
-		
-	
-}
