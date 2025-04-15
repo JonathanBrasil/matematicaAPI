@@ -1,4 +1,4 @@
-package com.example.matematicaAPI.model;
+package br.com.fatecmaua.matematicaAPI.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -41,17 +41,20 @@ public class Habilidade {
 			this.unidade = id_unidade;
 		}
 
-		//GETTERS AND SETTERS DE HABIIDADES
 		public Long getId() {
 			return id;
-		}
-		
-		public Integer getAnoEscolar() {
-			return anoEscolar;
 		}
 
 		public void setId(Long id) {
 			this.id = id;
+		}
+
+		public Integer getAnoEscolar() {
+			return anoEscolar;
+		}
+
+		public void setAnoEscolar(Integer anoEscolar) {
+			this.anoEscolar = anoEscolar;
 		}
 
 		public String getSigla() {
@@ -86,13 +89,15 @@ public class Habilidade {
 			this.bimestre = bimestre;
 		}
 
-		public Unidade getId_unidade() {
+		public Unidade getUnidade() {
 			return unidade;
 		}
 
-		public void setId_unidade(Unidade id_unidade) {
-			this.unidade = id_unidade;
+		public void setUnidade(Unidade unidade) {
+			this.unidade = unidade;
 		}
-		
+
+		//GETTERS AND SETTERS DE HABIIDADES
+
 		
 	}

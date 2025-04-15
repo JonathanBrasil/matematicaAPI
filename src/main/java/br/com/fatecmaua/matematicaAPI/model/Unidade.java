@@ -1,4 +1,4 @@
-package com.example.matematicaAPI.model;
+package br.com.fatecmaua.matematicaAPI.model;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ import jakarta.persistence.Table;
 		private Long id; //ID autoincrementado
 		private String nome; // NUMEROS, ALGEBRA, GEOMETRIA, GRANDEZAS E MEDIDAS, PROBABILIDADE E ESTATISTICA
 		private String descricao;
-		@OneToMany(mappedBy = "unidade", cascade = CascadeType.REMOVE) //Uma unidade tem varias habilidades, excluir uma unidade exclui todas habilidades relacionadas
+		@OneToMany(mappedBy = "unidade", cascade = CascadeType.ALL) //Uma unidade tem varias habilidades, excluir uma unidade exclui todas habilidades relacionadas
 		@JsonIgnoreProperties("unidade")
 	    private List<Habilidade> habilidades;
 		

@@ -1,4 +1,6 @@
-package com.example.matematicaAPI.model;
+package br.com.fatecmaua.matematicaAPI.model;
+
+import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,16 +17,17 @@ public class Usuario {
 	private Long id; 
 	private String nome;
 	private String email;
-	private Integer tipo;	
+	private Integer tipo;
+	private LocalDate data_criacao;
+		
 	
-	
-	
-	public Usuario(Long id, String nome, String email, Integer tipo) {
+	public Usuario(Long id, String nome, String email, Integer tipo, LocalDate data_criacao) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
 		this.tipo = tipo;
+		this.data_criacao = data_criacao;
 	}
 	
 	
@@ -52,6 +55,13 @@ public class Usuario {
 	public void setTipo(Integer tipo) {
 		this.tipo = tipo;
 	}
-	
+
+	public LocalDate getData_criacao() {
+		return data_criacao;
+	}
+
+	public void setData_criacao(LocalDate data_criacao) {
+		this.data_criacao = data_criacao;
+	}
 }
 

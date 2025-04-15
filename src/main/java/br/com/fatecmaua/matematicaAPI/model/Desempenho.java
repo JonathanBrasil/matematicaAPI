@@ -1,4 +1,4 @@
-package com.example.matematicaAPI.model;
+package br.com.fatecmaua.matematicaAPI.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

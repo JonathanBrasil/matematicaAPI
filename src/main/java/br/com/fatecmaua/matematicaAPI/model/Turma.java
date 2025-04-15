@@ -1,4 +1,4 @@
-package com.example.matematicaAPI.model;
+package br.com.fatecmaua.matematicaAPI.model;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "turma")
+@Table(name = "tb_turma")
 public class Turma {
 
 	@Id
