@@ -23,31 +23,6 @@ INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2005-08-23', 
 INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2006-11-11', 3, 'carlos.botelho@educadmin.org', 'Carlos Botelho');
 INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2007-01-30', 3, 'priscila.azevedo@educadmin.org', 'Priscila Azevedo');
 
---INSERTS TABELA tb_turma
-INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (6, 11, 'TURMA6A');
-INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (6, 12, 'TURMA6B');
-INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (6, 13, 'TURMA6C');
-INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (7, 14, 'TURMA7A');
-INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (7, 15, 'TURMA7B');
-INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (7, 11, 'TURMA7C');
-INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (8, 13, 'TURMA8A');
-INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (8, 14, 'TURMA8B');
-INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (9, 12, 'TURMA9A');
-INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (9, 15, 'TURMA9B');
-
---INSERTS TABELA tb_aluno_turma
-INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (1, 1); --aluno Lara, TURMA6A
-INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (2, 1); --aluno Enzo, TURMA6A
-INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (3, 2); --aluno Enzo, TURMA6B
-INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (4, 2); --aluno Enzo, TURMA6B
-INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (5, 3); --aluno Enzo, TURMA6C
-INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (6, 3); --aluno Enzo, TURMA6C
-INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (7, 4); --aluno Enzo, TURMA7A
-INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (8, 5); --aluno Enzo, TURMA7B
-INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (9, 8); --aluno Enzo, TURMA8B
-INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (10, 9); --aluno Enzo, TURMA9A
-
-
 --INSERTS DA TABELA tb_unidade_Matematica
 INSERT INTO tb_unidade_Matematica (nome, descricao) VALUES ('Números','Desenvolver a noção de número, incluindo as ideias de aproximação, proporcionalidade, equivalência e ordem');
 INSERT INTO tb_unidade_Matematica (nome, descricao) VALUES ('Álgebra','Desenvolver as ideias de equivalência, proporcionalidade, variação e interdependência');
@@ -202,6 +177,30 @@ INSERT INTO tb_habilidades (id_unidade, ano_Escolar, sigla, descricao, objeto_Co
 INSERT INTO tb_habilidades (id_unidade, ano_Escolar, sigla, descricao, objeto_Conhecimento, bimestre) VALUES (5, 9, 'EF09MA22', 'Escolher e construir o gráfico mais adequado (colunas, setores, linhas), com ou sem uso de planilhas eletrônicas, para apresentar um determinado conjunto de dados, destacando aspectos como as medidas de tendência central.', 'Leitura, interpretação e representação de dados de pesquisa expressos em tabelas de dupla entrada, gráficos de colunas simples e agrupadas, gráficos de barras e de setores e gráficos pictóricos', 3);
 INSERT INTO tb_habilidades (id_unidade, ano_Escolar, sigla, descricao, objeto_Conhecimento, bimestre) VALUES (5, 9, 'EF09MA23', 'Planejar e executar pesquisa amostral envolvendo tema da realidade social e comunicar os resultados por meio de relatório contendo avaliação de medidas de tendência central e da amplitude, tabelas e gráficos adequados, construídos com o apoio de planilhas eletrônicas.', 'Planejamento e execução de pesquisa amostral e apresentação de relatório', 3);
 
+--INSERTS TABELA tb_turma
+INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (6, 11, 'TURMA6A');
+INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (6, 12, 'TURMA6B');
+INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (6, 13, 'TURMA6C');
+INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (7, 14, 'TURMA7A');
+INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (7, 15, 'TURMA7B');
+INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (7, 11, 'TURMA7C');
+INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (8, 13, 'TURMA8A');
+INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (8, 14, 'TURMA8B');
+INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (9, 12, 'TURMA9A');
+INSERT INTO tb_turma (ano_escolar, id_professor, codigo) VALUES (9, 15, 'TURMA9B');
+
+--INSERTS TABELA tb_aluno_turma
+INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (1, 1); --aluno Lara, TURMA6A
+INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (2, 1); --aluno Enzo, TURMA6A
+INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (3, 2); --aluno Enzo, TURMA6B
+INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (4, 2); --aluno Enzo, TURMA6B
+INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (5, 3); --aluno Enzo, TURMA6C
+INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (6, 3); --aluno Enzo, TURMA6C
+INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (7, 4); --aluno Enzo, TURMA7A
+INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (8, 5); --aluno Enzo, TURMA7B
+INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (9, 8); --aluno Enzo, TURMA8B
+INSERT INTO tb_aluno_turma (id_aluno, id_turma) VALUES (10, 9); --aluno Enzo, TURMA9A
+
 --INSERTS DA TABELA tb_questao
 INSERT INTO tb_questao (id_habilidade, alternativa_a, alternativa_b, alternativa_c, alternativa_d, alternativa_e, enunciado, resposta_correta) VALUES (1, '50', '500', '5', '5000', '0.5', 'Qual o valor posicional do dígito 5 no número 3.582?', 'B');
 INSERT INTO tb_questao (id_habilidade, alternativa_a, alternativa_b, alternativa_c, alternativa_d, alternativa_e, enunciado, resposta_correta) VALUES (1, '150', '125', '130', '145', '160', 'Resolva: 75 + 128 - 53 = ?', 'D');
@@ -251,7 +250,6 @@ INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_
 INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_turma, sugestao) VALUES (6, 9.5, 3, 3, 'Excelente desempenho');
 INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_turma, sugestao) VALUES (3, 4.0, 4, 4, 'Reforço necessário em medidas');
 INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_turma, sugestao) VALUES (5, 7.0, 5, 5, 'Atenção em estatística');
---dando erro??
 INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_turma, sugestao) VALUES (4, 6.0, 6, 6, 'Praticar mais exercícios');
 INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_turma, sugestao) VALUES (5, 8.2, 7, 7, 'Bom desempenho, continuar revisando');
 INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_turma, sugestao) VALUES (2, 3.5, 8, 8, 'Necessita reforço urgente');

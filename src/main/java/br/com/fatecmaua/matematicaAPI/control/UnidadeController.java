@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.fatecmaua.matematicaAPI.model.Unidade;
 import br.com.fatecmaua.matematicaAPI.repository.UnidadeRepository;
 
-
 @RestController
 @RequestMapping(value = "/unidade")
 public class UnidadeController {

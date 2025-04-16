@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.fatecmaua.matematicaAPI.model.Habilidade;
 import br.com.fatecmaua.matematicaAPI.repository.HabilidadeRepository;
 
-
 @RestController
 @RequestMapping(value = "/habilidade")
 public class HabilidadeController {
@@ -61,7 +60,8 @@ public class HabilidadeController {
 
 	// Atualizar uma habilidade
 	@PutMapping("/{id}")
-	public ResponseEntity<Habilidade> atualizarAtividade(@PathVariable("id") Long id, @RequestBody Habilidade habilidade) {
+	public ResponseEntity<Habilidade> atualizarAtividade(@PathVariable("id") Long id,
+			@RequestBody Habilidade habilidade) {
 		Optional<Habilidade> habilidadeExistente = habilidadeRepository.findById(id);
 		if (habilidadeExistente.isPresent()) {
 			Habilidade habilidadeAtualizada = habilidadeExistente.get();

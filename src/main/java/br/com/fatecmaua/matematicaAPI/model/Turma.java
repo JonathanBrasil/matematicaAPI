@@ -24,7 +24,7 @@ public class Turma {
 	@JoinColumn(name = "id_professor")
 	private Usuario professor;
 	@OneToMany(fetch = FetchType.EAGER)
-	@JoinTable(name = "aluno_turma_tab", 
+	@JoinTable(name = "tb_aluno_turma", 
 	joinColumns = @JoinColumn(name = "id_turma"), 
 	inverseJoinColumns = @JoinColumn(name = "id_aluno"))
     private List<Usuario> alunos;
