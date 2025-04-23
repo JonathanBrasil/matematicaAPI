@@ -16,13 +16,13 @@ import jakarta.persistence.Table;
 @Table(name = "tb_unidade_Matematica")
 public class Unidade {
 
+	//Atributos da entidade
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id; // ID autoincrementado
 	private String nome; // NUMEROS, ALGEBRA, GEOMETRIA, GRANDEZAS E MEDIDAS, PROBABILIDADE E ESTATISTICA
 	private String descricao;
-	@OneToMany(mappedBy = "unidade", cascade = CascadeType.ALL) // Uma unidade tem varias habilidades, excluir uma
-																// unidade exclui todas habilidades relacionadas
+	@OneToMany(mappedBy = "unidade", cascade = CascadeType.REMOVE) // Uma unidade tem varias habilidades, excluir uma unidade exclui todas habilidades relacionadas													
 	@JsonIgnoreProperties("unidade")
 	private List<Habilidade> habilidades;
 	

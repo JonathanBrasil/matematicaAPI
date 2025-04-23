@@ -5,19 +5,27 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "resposta")
+@Table(
+	    name = "resposta",
+	    uniqueConstraints = @UniqueConstraint(columnNames = {"id_aluno", "id_questao"})
+	)
 public class Resposta {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "id_questao")
 	private Questao questao;
+	@ManyToOne
+    @JoinColumn(name = "id_aluno") 
+    private Usuario aluno;
 	private String alternativa_escolhida;
 	private boolean acertou;
 
@@ -47,6 +55,14 @@ public class Resposta {
 
 	public void setQuestao(Questao questao) {
 		this.questao = questao;
+	}
+	
+	public Usuario getAluno() {
+		return aluno;
+	}
+
+	public void setAluno(Usuario aluno) {
+		this.aluno = aluno;
 	}
 
 	public String getAlternativa_escolhida() {

@@ -2,6 +2,8 @@ package br.com.fatecmaua.matematicaAPI.model;
 
 import java.time.LocalDate;
 
+import org.hibernate.annotations.UpdateTimestamp;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,6 +20,7 @@ public class Usuario {
 	private String nome;
 	private String email;
 	private Integer tipo;
+	@UpdateTimestamp
 	private LocalDate data_criacao;
 	
 	public Usuario() {

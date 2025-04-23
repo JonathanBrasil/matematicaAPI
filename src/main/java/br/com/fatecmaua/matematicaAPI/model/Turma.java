@@ -42,6 +42,11 @@ public class Turma {
 		this.codigo = codigo;
 		this.ano_escolar = ano_escolar;
 	}
+	
+	
+	public List<Usuario> getAlunos() {
+		return alunos;
+	}
 
 	public Long getId() {
 		return id;

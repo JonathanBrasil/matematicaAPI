@@ -13,10 +13,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.fatecmaua.matematicaAPI.model.Resposta;
 import br.com.fatecmaua.matematicaAPI.repository.RespostaRepository;
+import br.com.fatecmaua.matematicaAPI.service.RespostaService;
 
 @RestController
 @RequestMapping(value = "/resposta")
@@ -24,6 +26,25 @@ public class RespostaController {
 
 	@Autowired
 	private RespostaRepository respostaRepository;
+	
+	@Autowired
+    private RespostaService respostaService;
+	
+	// Endpoint para responder a uma questão
+	 @PostMapping("/responder")
+	    public ResponseEntity<String> responderQuestao(
+	        @RequestParam(value = "idAluno") Long idAluno,
+	        @RequestParam(value = "idQuestao") Long idQuestao,
+	        @RequestParam(value = "alternativaEscolhida") String alternativaEscolhida
+	    ) {
+		 
+		 if (respostaRepository.findByAlunoIdAndQuestaoId(idAluno, idQuestao).isPresent()) {
+		        throw new IllegalArgumentException("Esse aluno já respondeu essa questão.");
+		    }
+		 
+	        respostaService.processarResposta(idAluno, idQuestao, alternativaEscolhida);
+	        return ResponseEntity.ok("Resposta registrada e desempenho atualizado.");
+	    }
 
 	// Criar uma nova resposta
 	@PostMapping
