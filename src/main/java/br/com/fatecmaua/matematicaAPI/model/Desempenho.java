@@ -1,6 +1,5 @@
 package br.com.fatecmaua.matematicaAPI.model;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -42,6 +41,18 @@ public class Desempenho {
 
 	public Desempenho(Long id, Usuario aluno, Turma turma, Double pontuacao_final, Integer atividades_concluidas,
 			String sugestao, Double media) {
+		super();
+		this.id = id;
+		this.aluno = aluno;
+		this.turma = turma;
+		this.pontuacao_final = pontuacao_final;
+		this.media = media;
+		this.atividades_concluidas = atividades_concluidas;
+		this.sugestao = sugestao;
+	}
+	
+	public Desempenho(Long id, Usuario aluno, Turma turma, Double pontuacao_final, Double media,
+			Integer atividades_concluidas, String sugestao) {
 		super();
 		this.id = id;
 		this.aluno = aluno;

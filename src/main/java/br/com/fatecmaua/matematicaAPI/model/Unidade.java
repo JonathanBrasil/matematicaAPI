@@ -26,6 +26,7 @@ public class Unidade {
 	@JsonIgnoreProperties("unidade")
 	private List<Habilidade> habilidades;
 	
+	// CONSTRUTOR VAZIO
 	public Unidade() {
 
 	}

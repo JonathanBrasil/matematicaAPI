@@ -9,17 +9,12 @@ import br.com.fatecmaua.matematicaAPI.model.Desempenho;
 import br.com.fatecmaua.matematicaAPI.model.Turma;
 import br.com.fatecmaua.matematicaAPI.model.Usuario;
 import br.com.fatecmaua.matematicaAPI.repository.DesempenhoRepository;
-import br.com.fatecmaua.matematicaAPI.repository.QuestaoRepository;
 import br.com.fatecmaua.matematicaAPI.repository.TurmaRepository;
-import br.com.fatecmaua.matematicaAPI.repository.UsuarioRepository;
-
 
 
 @Service
 public class DesempenhoService {
 
-	@Autowired
-	private UsuarioRepository usuarioRepository;
 	
 	@Autowired
 	private DesempenhoRepository desempenhoRepository;
@@ -27,14 +22,10 @@ public class DesempenhoService {
 	@Autowired
 	private TurmaRepository turmaRepository;
 
-	@Autowired
-	private QuestaoRepository questaoRepository;
-
 	public void atualizarDesempenho(Long idAluno, Long idQuestao, boolean acertou) {
 		// Buscando a turma do aluno com base no idAluno
-		Turma turma = turmaRepository.findAll().stream()
-				.filter(t -> t.getAlunos().stream().anyMatch(aluno -> aluno.getId().equals(idAluno))).findFirst()
-				.orElseThrow(() -> new RuntimeException("Aluno não encontrado na turma"));
+		Turma turma = turmaRepository.findTurmaByAlunoId(idAluno)
+		        .orElseThrow(() -> new RuntimeException("Aluno não encontrado na turma"));
 		
 		Usuario aluno = turma.getAlunos().stream()
 			    .filter(a -> a.getId().equals(idAluno))

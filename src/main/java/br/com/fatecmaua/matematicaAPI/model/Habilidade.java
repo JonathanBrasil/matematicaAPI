@@ -1,7 +1,6 @@
 package br.com.fatecmaua.matematicaAPI.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,18 +16,20 @@ public class Habilidade {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id; // ID autoincrementado
-	private Integer anoEscolar;
-	private String sigla; // Exemplo EF06MA17 -- Ensino Fundamental, ANO 06, Matematica, HABILIDADE 17
-	@Column(columnDefinition = "TEXT", length = 500)
-	private String descricao;
-	@Column(length = 500)
-	private String objetoConhecimento;
-	private Integer bimestre;
+	private Long id;
 	@ManyToOne
 	@JsonIgnoreProperties("habilidades")
 	@JoinColumn(name = "id_unidade", nullable = false) // Define a FK para a unidade (Numero, Algebra, Geometria,etec..														
 	private Unidade unidade; // Referência à entidade Unidade
+	private Integer anoEscolar;
+	private Integer bimestre;
+	private String sigla; // Exemplo EF06MA17
+	@Column(length = 500)
+	private String descricao;
+	@Column(length = 500)
+	private String objetoConhecimento;
+
+
 	
 	public Habilidade() {
 
