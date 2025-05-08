@@ -44,8 +44,13 @@ public class Turma {
 	}
 	
 	
+	//Método para buscar alunos.
 	public List<Usuario> getAlunos() {
 		return alunos;
+	}
+	
+	public void setAlunos(List<Usuario> alunos) {
+		this.alunos = alunos;
 	}
 
 	public Long getId() {

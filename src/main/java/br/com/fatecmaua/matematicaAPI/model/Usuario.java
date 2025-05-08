@@ -28,7 +28,6 @@ public class Usuario {
 	}
 
 	public Usuario(Long id, String nome, String email, Integer tipo, LocalDate data_criacao) {
-		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;

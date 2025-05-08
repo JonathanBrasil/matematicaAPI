@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
 
@@ -16,10 +16,10 @@ public class Desempenho {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "id_aluno")
 	private Usuario aluno;
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "id_turma")
 	private Turma turma;
 	private Double pontuacao_final;
