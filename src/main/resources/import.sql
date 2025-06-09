@@ -1,27 +1,27 @@
 --INSERTS DA TABELA tb_usuarios Usuario
 --tipo 1 ALUNOS
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2010-03-15', 1, 'lara.martins@gmail.com', 'Lara Martins');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2011-07-21', 1, 'enzo.silva@yahoo.com', 'Enzo da Silva');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2012-05-30', 1, 'amanda.souza@hotmail.com', 'Amanda Souza');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2013-08-14', 1, 'pedro.lima@outlook.com', 'Pedro Lima');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2014-11-25', 1, 'beatriz.almeida@gmail.com', 'Beatriz Almeida');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2015-02-10', 1, 'lucas.rocha@yahoo.com', 'Lucas Rocha');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2016-06-18', 1, 'sofia.castro@gmail.com', 'Sofia Castro');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2017-09-05', 1, 'matheus.mendes@hotmail.com', 'Matheus Mendes');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2018-12-12', 1, 'julia.santos@uol.com.br', 'Julia Santos');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2019-04-22', 1, 'guilherme.pereira@gmail.com', 'Guilherme Pereira');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2010-03-15', 1, 'usuario1@email.com', 'Usuario1');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2011-07-21', 1, 'usuario2@email.com', 'Usuario2');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2012-05-30', 1, 'usuario3@email.com', 'Usuario3');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2013-08-14', 1, 'usuario4@email.com', 'Usuario4');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2014-11-25', 1, 'usuario5@email.com', 'Usuario5');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2015-02-10', 1, 'usuario6@email.com', 'Usuario6');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2016-06-18', 1, 'usuario7@email.com', 'Usuario7');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2017-09-05', 1, 'usuario8@email.com', 'Usuario8');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2018-12-12', 1, 'usuario9@email.com', 'Usuario9');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2019-04-22', 1, 'usuario10@email.com', 'Usuario10');
 --tipo 2 PROFESSORES
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2005-01-15', 2, 'marcelo.costa@escola.edu.br', 'Marcelo Costa');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2006-03-22', 2, 'renata.oliveira@escola.edu.br', 'Renata Oliveira');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2007-07-19', 2, 'anderson.lopes@escola.edu.br', 'Anderson Lopes');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2008-09-30', 2, 'carla.ramos@escola.edu.br', 'Carla Ramos');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2007-12-10', 2, 'danilo.ferreira@escola.edu.br', 'Danilo Ferreira');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2005-01-15', 2, 'usuario11@email.com', 'Usuario11');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2006-03-22', 2, 'usuario12@email.com', 'Usuario12');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2007-07-19', 2, 'usuario13@email.com', 'Usuario13');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2008-09-30', 2, 'usuario14@email.com', 'Usuario14');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2007-12-10', 2, 'usuario15@email.com', 'Usuario15');
 --tipo 3 ADM
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2003-02-25', 3, 'admin.maria@educadmin.org', 'Maria do Carmo');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2004-05-14', 3, 'joao.frota@educadmin.org', 'João Frota');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2005-08-23', 3, 'aline.macedo@educadmin.org', 'Aline Macedo');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2006-11-11', 3, 'carlos.botelho@educadmin.org', 'Carlos Botelho');
-INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2007-01-30', 3, 'priscila.azevedo@educadmin.org', 'Priscila Azevedo');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2003-02-25', 3, 'usuario16@email.com', 'Usuario16');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2004-05-14', 3, 'usuario17@email.com', 'Usuario17');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2005-08-23', 3, 'usuario18@email.com', 'Usuario18');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2006-11-11', 3, 'usuario19@email.com', 'Usuario19');
+INSERT INTO tb_usuarios (data_criacao, tipo, email, nome) VALUES ('2007-01-30', 3, 'usuario20@email.com', 'Usuario20');
 
 --INSERTS DA TABELA tb_unidade_Matematica
 INSERT INTO tb_unidade_Matematica (nome, descricao) VALUES ('Números','Desenvolver a noção de número, incluindo as ideias de aproximação, proporcionalidade, equivalência e ordem');
