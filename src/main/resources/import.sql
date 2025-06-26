@@ -232,26 +232,3 @@ INSERT INTO tb_questao (id_habilidade, alternativa_a, alternativa_b, alternativa
 INSERT INTO tb_questao (id_habilidade, alternativa_a, alternativa_b, alternativa_c, alternativa_d, alternativa_e, enunciado, resposta_correta) VALUES (6, '1', '2', '3', '4', '5', 'Quantos gráficos de barras simples são necessários para mostrar dois conjuntos de dados?', 'B');
 INSERT INTO tb_questao (id_habilidade, alternativa_a, alternativa_b, alternativa_c, alternativa_d, alternativa_e, enunciado, resposta_correta) VALUES (6, 'Sim', 'Não', 'Às vezes', 'Nunca', 'Talvez', 'Um gráfico de setores é adequado para representar partes de um todo?', 'A');
 
--- Tabela RESPOSTA
-INSERT INTO resposta (acertou, id_questao, alternativa_escolhida) VALUES (true, 1, 'C');
-INSERT INTO resposta (acertou, id_questao, alternativa_escolhida) VALUES (false, 2, 'B');
-INSERT INTO resposta (acertou, id_questao, alternativa_escolhida) VALUES (true, 3, 'C');
-INSERT INTO resposta (acertou, id_questao, alternativa_escolhida) VALUES (true, 4, 'D');
-INSERT INTO resposta (acertou, id_questao, alternativa_escolhida) VALUES (false, 5, 'A');
-INSERT INTO resposta (acertou, id_questao, alternativa_escolhida) VALUES (true, 6, 'E');
-INSERT INTO resposta (acertou, id_questao, alternativa_escolhida) VALUES (false, 7, 'D');
-INSERT INTO resposta (acertou, id_questao, alternativa_escolhida) VALUES (true, 8, 'C');
-INSERT INTO resposta (acertou, id_questao, alternativa_escolhida) VALUES (false, 9, 'B');
-INSERT INTO resposta (acertou, id_questao, alternativa_escolhida) VALUES (true, 10, 'C');
-
--- Tabela DESEMPENHO
-INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_turma, sugestao) VALUES (5, 8.0, 1, 1, 'Revisar álgebra básica');
-INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_turma, sugestao) VALUES (4, 6.5, 2, 2, 'Estudar mais sobre geometria');
-INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_turma, sugestao) VALUES (6, 9.5, 3, 3, 'Excelente desempenho');
-INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_turma, sugestao) VALUES (3, 4.0, 4, 4, 'Reforço necessário em medidas');
-INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_turma, sugestao) VALUES (5, 7.0, 5, 5, 'Atenção em estatística');
-INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_turma, sugestao) VALUES (4, 6.0, 6, 6, 'Praticar mais exercícios');
-INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_turma, sugestao) VALUES (5, 8.2, 7, 7, 'Bom desempenho, continuar revisando');
-INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_turma, sugestao) VALUES (2, 3.5, 8, 8, 'Necessita reforço urgente');
-INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_turma, sugestao) VALUES (6, 9.8, 9, 9, 'Excelente, manter o ritmo');
-INSERT INTO tb_desempenho (atividades_concluidas, pontuacao_final, id_aluno, id_turma, sugestao) VALUES (4, 5.5, 10, 10, 'Revisar números e operações');
